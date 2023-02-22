@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var i=1;
+        var tekst="";
+        function towork(){
+            var r=Math.floor(Math.random()*256);
+            var g=Math.floor(Math.random()*256);
+            var b=Math.floor(Math.random()*256);
+            var kolor="rgb("+r+","+g+","+b+")"
+            document.getElementById("doroboty").style.color=kolor;
+            wstaw+=tekst.charAt(i);
+            document.getElementById("doroboty").innerHTML=wstaw
+            if(i%2==0)document.getElementById("doroboty").style.textDecoration="underline"
+            else document.getElementById("doroboty").style.textDecoration="overline"
+            i++
+            if(i=tekscior.length){
+                i=0
+                tekst=""
+            }
+        }
+        onload=function(){
+            wstaw="";
+            tekst="1P1-DO ROBOTY"
+            i=0
+            setInterval("towork()", 1000)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="doroboty"></h1>
+</body>
+</html>
